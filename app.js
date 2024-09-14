@@ -1,4 +1,6 @@
 let navbar = document.querySelector('#navbar');
+let navend= document.querySelector('#navend');
+
 
 
 
@@ -6,12 +8,23 @@ let navbar = document.querySelector('#navbar');
 
 
 window.addEventListener('scroll',()=>{
-    console.log(window.scrollY);
+  
     if(window.scrollY > 500){
         navbar.classList.add('show')
+     
      }
     else{
         navbar.classList.remove('show')
      }
+     hideDiv();
+  
 })
 
+function hideDiv() {
+    navend.classList.add('hidden');
+    
+    setTimeout(() => {
+        navend.classList.remove('hidden');
+    }, 4000);
+
+}
